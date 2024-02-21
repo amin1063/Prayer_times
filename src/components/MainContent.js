@@ -151,9 +151,10 @@ const MainContent = () => {
       remainingTime = totalDiff;
     }
 
-    setRemainingTime(
-      `${durationRemainingTime.hours()}:${durationRemainingTime.minutes()}:${durationRemainingTime.seconds()}`
-    );
+    
+const formattedRemainingTime = moment.utc(durationRemainingTime.asMilliseconds()).format("HH:mm:ss");
+setRemainingTime(formattedRemainingTime);
+ 
   };
 
   return (
