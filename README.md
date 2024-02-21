@@ -58,7 +58,7 @@ We welcome contributions from the community! If you find a bug, have a feature r
 
 
 Acknowledgments
-Special thanks to [https://api.aladhan.com/v1/timingsByAddress] for their contributions to this project.
+Special thanks to [aladhan.com/prayer-times-api] for their contributions to this project.
 
 Contact
 If you have any questions or concerns, feel free to reach out to us at [shaikhamin795@gmail.com].
