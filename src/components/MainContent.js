@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
@@ -7,6 +6,7 @@ import Prayer from "./Prayer";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import ImageCard from "./ImageCard";
+import { useEffect,useState } from 'react';
 
 const MainContent = () => {
   const currentDate = new Date();
@@ -98,8 +98,6 @@ const MainContent = () => {
       clearInterval(t);
     };
   }, [timings]);
-
-  
   const setUpCountdownTimer = () => {
     const momentNow = moment();
     let nextPrayer = 0;
@@ -138,6 +136,7 @@ const MainContent = () => {
     const nextPrayerTimeMoment = moment(nextPrayerTime, "hh:mm");
 
     let remainingTime = moment(nextPrayerTime, "hh:mm").diff(momentNow);
+
     const durationRemainingTime = moment.duration(remainingTime);
 
     if (remainingTime < 0) {
@@ -151,10 +150,10 @@ const MainContent = () => {
       remainingTime = totalDiff;
     }
 
-    
+ 
 const formattedRemainingTime = moment.utc(durationRemainingTime.asMilliseconds()).format("HH:mm:ss");
 setRemainingTime(formattedRemainingTime);
- 
+    
   };
 
   return (
@@ -182,8 +181,6 @@ setRemainingTime(formattedRemainingTime);
                     value={search}
                       dir="ltr"
                      />        
-
-                  
                 </form>
               </Box>
             </Grid>
