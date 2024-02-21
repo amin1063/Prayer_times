@@ -174,8 +174,9 @@ body::after {
     transform: rotate(360deg);
   }
 }
+/* ... Your existing CSS ... */
 
-@media (width <= 660px) {
+@media (max-width: 660px) {
   .content > div {
     display: flex;
     flex-direction: column;
@@ -185,14 +186,22 @@ body::after {
     width: 100%;
   }
 
+  .form input {
+    width: 100%;
+  }
 
+  .form .btn {
+    border-radius: 5px; /* Adjust as needed */
+    margin-top: 10px;  /* Adjust as needed */
+  }
 }
 
-@media (width <= 600px)  {
+@media (max-width: 600px) {
   .top > div {
     flex-direction: column;
   }
-  .search > div{
-    width: 100%;
+
+  .search > div {
+    width: 70%;
   }
 }
